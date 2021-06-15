@@ -1,15 +1,11 @@
-import styled from 'styled-components'
-
-// CSS scoped by component
-const Title = styled.h1`
-  color: #8257e6;
-  font-size: 64px;
-`
-
+import { GlobalStyle } from "./styles/global";
 
 function App() {
   return (
-    <Title>teste</Title>
+    <div className="App">
+    <h1>Hello world</h1>
+      <GlobalStyle />
+    </div>
   );
 }
 
