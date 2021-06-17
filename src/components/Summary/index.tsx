@@ -1,12 +1,25 @@
 import incomeImg from '../../assets/income.svg'
 import outcomeImg from '../../assets/outcome.svg'
 import totalImg from '../../assets/total.svg'
+import { TransactionsContext } from '../../TransactionsContext'
 import { Container } from './styles'
+import { useContext } from 'react'
 
 
 export default function Summary() {
+
+  // Nova API com React Hooks
+  // const data = useContext(TransactionsContext);
+  // console.log(data)
   return (
     <Container>
+      {/* // API antiga */}
+      {/* <TransactionsContext.Consumer>
+        {(data) => {
+          console.log(data)
+          return <h1>ok</h1>
+        }}
+      </TransactionsContext.Consumer> */}
 
       <div>
         <header>
