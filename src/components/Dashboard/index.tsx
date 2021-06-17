@@ -10,3 +10,4 @@ export default function Dashboard() {
     </Container>
   )
 }
+      // Prop drilling is a problem in React
