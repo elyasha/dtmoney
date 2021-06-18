@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState, ReactNode } from 'react';
-import { api } from './services/api';
+import { createContext, useEffect, useState, ReactNode, useContext } from 'react';
+import { api } from '../services/api';
 
 interface Transaction {
   id: number;
@@ -31,7 +31,7 @@ interface TransactionsContextData {
   createTransaction: (transaction: TransactionInput) => Promise<void>;
 }
 
-export const TransactionsContext = createContext<TransactionsContextData>({} as TransactionsContextData); // Default valut é forçado pela tipagem do typescript
+const TransactionsContext = createContext<TransactionsContextData>({} as TransactionsContextData); // Default valut é forçado pela tipagem do typescript
 
 
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
@@ -56,4 +56,9 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     </TransactionsContext.Provider>
   )
 
+}
+
+
+export function useTransactions() {
+  return useContext(TransactionsContext)
 }
