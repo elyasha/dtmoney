@@ -9,7 +9,7 @@ import { Container } from './styles'
 export default function Summary() {
 
   // Nova API com React Hooks
-  const transactions = useContext(TransactionsContext);
+  const {transactions} = useContext(TransactionsContext);
   console.log(transactions)
   return (
     <Container>
